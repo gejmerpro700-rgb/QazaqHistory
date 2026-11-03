@@ -8,8 +8,7 @@ interface SectionPageProps {
 export default function SectionPage({ children, className = '' }: SectionPageProps) {
   return (
     <div
-      className={`min-h-screen ${className}`}
-      style={{ backgroundColor: '#0f0a04' }}
+      className={`page-surface ${className}`}
     >
       {children}
     </div>

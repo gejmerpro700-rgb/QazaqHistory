@@ -37,18 +37,16 @@ export default function SurveySection() {
   return (
     <section
       id="survey"
-      className="py-24 px-4 scroll-mt-24"
-      style={{ backgroundColor: '#0d0906' }}
+      className="home-section section-survey py-24 px-4 scroll-mt-24"
     >
       <div className="max-w-3xl mx-auto">
         {/* Header card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.18 }}
           transition={{ duration: 0.6 }}
-          className="rounded-2xl overflow-hidden"
-          style={{ backgroundColor: '#0f0a04', border: '1px solid rgba(201,168,76,0.2)' }}
+          className="glass-card rounded-2xl overflow-hidden"
         >
           <div className="p-6">
             <div className="flex items-center justify-between gap-4">
@@ -74,7 +72,7 @@ export default function SurveySection() {
                 ) : (
                   <button
                     onClick={() => setIsExpanded(!isExpanded)}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all"
+                    className="interactive-control flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold"
                     style={{ background: 'rgba(201,168,76,0.15)', color: '#C9A84C', border: 'none', cursor: 'pointer' }}
                   >
                     {isExpanded ? 'Жабу' : 'Жауап беру'}
@@ -137,7 +135,7 @@ export default function SurveySection() {
                                   <button
                                     key={opt}
                                     onClick={() => q.type === 'multiple' ? handleMultiple(q.id, opt) : handleSingle(q.id, opt)}
-                                    className="w-full text-left px-4 py-2.5 rounded-lg text-sm transition-all"
+                                    className="interactive-control w-full text-left px-4 py-2.5 rounded-lg text-sm"
                                     style={{
                                       backgroundColor: selected ? 'rgba(201,168,76,0.15)' : 'rgba(201,168,76,0.03)',
                                       border: `1px solid ${selected ? 'rgba(201,168,76,0.5)' : 'rgba(201,168,76,0.1)'}`,
@@ -159,7 +157,7 @@ export default function SurveySection() {
                       <button
                         onClick={handleSubmit}
                         disabled={!canSubmit}
-                        className="px-6 py-2.5 rounded-full text-sm font-semibold transition-all"
+                        className="interactive-control px-6 py-2.5 rounded-full text-sm font-semibold"
                         style={{
                           background: canSubmit ? '#C9A84C' : 'rgba(201,168,76,0.2)',
                           color: canSubmit ? '#0f0a04' : 'rgba(201,168,76,0.4)',
@@ -184,7 +182,7 @@ export default function SurveySection() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.18 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-center mt-4"
         >

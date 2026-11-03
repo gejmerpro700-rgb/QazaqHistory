@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
+import TimeNetwork from '../ui/TimeNetwork';
 
 export default function HeroSection() {
   const scrollToNext = () => {
@@ -11,11 +12,11 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-24"
-      style={{ background: 'linear-gradient(180deg, #0a0602 0%, #0f0a04 60%, #0d0906 100%)' }}
+      className="hero-surface relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-24"
     >
+      <TimeNetwork />
       {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
         <div
           className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle, #C9A84C 0%, transparent 70%)' }}
@@ -93,14 +94,14 @@ export default function HeroSection() {
         >
           <Link
             to="/topics"
-            className="px-8 py-4 rounded-full text-sm font-semibold tracking-wider uppercase transition-all hover:scale-105"
+            className="interactive-control px-8 py-4 rounded-full text-sm font-semibold tracking-wider uppercase"
             style={{ background: '#C9A84C', color: '#0f0a04' }}
           >
             Тарихты зерттеу
           </Link>
           <button
             onClick={scrollToNext}
-            className="px-8 py-4 rounded-full text-sm font-semibold tracking-wider uppercase transition-all hover:scale-105 border"
+            className="interactive-control px-8 py-4 rounded-full text-sm font-semibold tracking-wider uppercase border"
             style={{ borderColor: 'rgba(201,168,76,0.4)', color: '#C9A84C', background: 'transparent' }}
           >
             Толығырақ

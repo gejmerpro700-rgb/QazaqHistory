@@ -21,8 +21,7 @@ export default function SourcesSection() {
   return (
     <section
       id="sources"
-      className="py-24 px-4 scroll-mt-24"
-      style={{ backgroundColor: '#080502' }}
+      className="home-section section-sources py-24 px-4 scroll-mt-24"
     >
       <div className="max-w-5xl mx-auto">
         <SectionHeader
@@ -39,10 +38,9 @@ export default function SourcesSection() {
                 key={source.id}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
+                viewport={{ once: false, amount: 0.18 }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="flex gap-4 p-5 rounded-xl"
-                style={{ backgroundColor: '#0f0a04', border: '1px solid rgba(201,168,76,0.1)' }}
+                className="glass-card interactive-card flex gap-4 p-5 rounded-xl"
               >
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"

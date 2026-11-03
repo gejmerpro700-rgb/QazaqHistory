@@ -5,8 +5,7 @@ import { Home } from 'lucide-react';
 export default function NotFoundPage() {
   return (
     <div
-      className="min-h-screen flex items-center justify-center px-4"
-      style={{ backgroundColor: '#0f0a04' }}
+      className="page-surface min-h-screen flex items-center justify-center px-4"
     >
       <div className="text-center max-w-md">
         <motion.div
@@ -31,7 +30,7 @@ export default function NotFoundPage() {
           </p>
           <Link
             to="/"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105"
+            className="interactive-control inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold"
             style={{ background: '#C9A84C', color: '#0f0a04' }}
           >
             <Home className="w-4 h-4" />

@@ -20,7 +20,7 @@ function Bar({ label, value, max, color = '#C9A84C' }: BarProps) {
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${pct}%` }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.18 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="h-full rounded-full"
           style={{ backgroundColor: color }}
@@ -34,15 +34,14 @@ export default function SurveyResultsSection() {
   return (
     <section
       id="survey-results"
-      className="py-24 px-4 scroll-mt-24"
-      style={{ backgroundColor: '#0a0602' }}
+      className="home-section section-results py-24 px-4 scroll-mt-24"
     >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.18 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
@@ -72,10 +71,9 @@ export default function SurveyResultsSection() {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: false, amount: 0.18 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="text-center p-5 rounded-xl"
-              style={{ backgroundColor: '#0f0a04', border: '1px solid rgba(201,168,76,0.15)' }}
+              className="glass-card interactive-card text-center p-5 rounded-xl"
             >
               <s.icon className="w-6 h-6 mx-auto mb-2" style={{ color: '#C9A84C' }} />
               <div className="text-2xl font-bold mb-1" style={{ color: '#C9A84C', fontFamily: 'Playfair Display, serif' }}>
@@ -92,10 +90,9 @@ export default function SurveyResultsSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.18 }}
             transition={{ duration: 0.6 }}
-            className="p-6 rounded-2xl"
-            style={{ backgroundColor: '#0f0a04', border: '1px solid rgba(201,168,76,0.15)' }}
+            className="glass-card interactive-card p-6 rounded-2xl"
           >
             <h4 className="font-semibold text-sm mb-4" style={{ color: '#f5f0e8' }}>
               XX ғасыр басындағы тарихты жалпы бағалау
@@ -111,10 +108,9 @@ export default function SurveyResultsSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.18 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="p-6 rounded-2xl"
-            style={{ backgroundColor: '#0f0a04', border: '1px solid rgba(201,168,76,0.15)' }}
+            className="glass-card interactive-card p-6 rounded-2xl"
           >
             <h4 className="font-semibold text-sm mb-4" style={{ color: '#f5f0e8' }}>
               Алаш қозғалысы туралы білім деңгейі
@@ -129,10 +125,9 @@ export default function SurveyResultsSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.18 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="p-6 rounded-2xl"
-            style={{ backgroundColor: '#0f0a04', border: '1px solid rgba(201,168,76,0.15)' }}
+            className="glass-card interactive-card p-6 rounded-2xl"
           >
             <h4 className="font-semibold text-sm mb-4" style={{ color: '#f5f0e8' }}>
               1916 жылғы ұлт-азаттық көтерілісі туралы хабардарлық
@@ -147,10 +142,9 @@ export default function SurveyResultsSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.18 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="p-6 rounded-2xl"
-            style={{ backgroundColor: '#0f0a04', border: '1px solid rgba(201,168,76,0.15)' }}
+            className="glass-card interactive-card p-6 rounded-2xl"
           >
             <h4 className="font-semibold text-sm mb-4" style={{ color: '#f5f0e8' }}>
               Тарихты оқытудың қалаулы әдісі (көп таңдау)
@@ -167,10 +161,9 @@ export default function SurveyResultsSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.18 }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="p-6 rounded-2xl md:col-span-2"
-            style={{ backgroundColor: '#0f0a04', border: '1px solid rgba(201,168,76,0.15)' }}
+            className="glass-card interactive-card p-6 rounded-2xl md:col-span-2"
           >
             <h4 className="font-semibold text-sm mb-4" style={{ color: '#f5f0e8' }}>
               Білім беру порталы пайдалы болды ма?

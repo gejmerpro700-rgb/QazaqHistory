@@ -6,7 +6,7 @@ interface VideoPlayerProps {
 
 export default function VideoPlayer({ src, poster, className = '' }: VideoPlayerProps) {
   return (
-    <div className={`relative rounded-xl overflow-hidden ${className}`} style={{ backgroundColor: '#000' }}>
+    <div className={`video-frame relative rounded-xl overflow-hidden ${className}`} style={{ backgroundColor: '#000' }}>
       <video
         controls
         poster={poster}

@@ -7,8 +7,7 @@ export default function InterviewSection() {
   return (
     <section
       id="interview"
-      className="py-24 px-4 scroll-mt-24"
-      style={{ backgroundColor: '#0d0906' }}
+      className="home-section section-interview py-24 px-4 scroll-mt-24"
     >
       <div className="max-w-6xl mx-auto">
         <SectionHeader
@@ -22,9 +21,9 @@ export default function InterviewSection() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.18 }}
             transition={{ duration: 0.7 }}
-            className="relative rounded-2xl overflow-hidden aspect-video group cursor-pointer"
+            className="video-frame relative rounded-2xl overflow-hidden aspect-video group cursor-pointer"
             style={{ backgroundColor: '#0a0602' }}
           >
             <Link to="/interview" className="block w-full h-full">
@@ -47,7 +46,7 @@ export default function InterviewSection() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.18 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <div className="flex items-center gap-3 mb-6">
@@ -80,7 +79,7 @@ export default function InterviewSection() {
 
             <Link
               to="/interview"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105"
+              className="interactive-control inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold"
               style={{ background: '#C9A84C', color: '#0f0a04' }}
             >
               Бейнені қарау

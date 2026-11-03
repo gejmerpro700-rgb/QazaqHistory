@@ -4,7 +4,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer style={{ backgroundColor: '#080502', borderTop: '1px solid rgba(201,168,76,0.15)' }}>
+    <footer className="site-footer" style={{ borderTop: '1px solid rgba(201,168,76,0.15)' }}>
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}

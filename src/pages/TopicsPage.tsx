@@ -6,7 +6,7 @@ import { topicCards } from '../data/historicalData';
 
 export default function TopicsPage() {
   return (
-    <div style={{ backgroundColor: '#0f0a04', minHeight: '100vh' }}>
+    <div className="page-surface section-topics">
       <PageHero
         kicker="ТАРИХИ АСПЕКТІЛЕР"
         title="Зерттеу бағыттары"
@@ -20,12 +20,12 @@ export default function TopicsPage() {
               key={topic.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: false, amount: 0.18 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
             >
               <Link
                 to={`/topics/${topic.id}`}
-                className="group block rounded-2xl p-6 h-full transition-all duration-300 hover:-translate-y-1"
+                className="interactive-card glass-card group block rounded-2xl p-6 h-full"
                 style={{
                   backgroundColor: '#0d0906',
                   border: '1px solid rgba(201,168,76,0.15)',

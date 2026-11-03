@@ -29,7 +29,7 @@ export default function TimelinePage() {
   const filtered = filter === 'all' ? timelineEvents : timelineEvents.filter((e) => e.category === filter);
 
   return (
-    <div style={{ backgroundColor: '#0f0a04', minHeight: '100vh' }}>
+    <div className="page-surface timeline-page">
       <PageHero
         kicker="ХРОНОЛОГИЯ"
         title="Тарихи хронология"
@@ -43,7 +43,7 @@ export default function TimelinePage() {
             <button
               key={cat}
               onClick={() => setFilter(cat as typeof filter)}
-              className="px-4 py-2 rounded-full text-sm font-medium transition-all"
+              className="interactive-control px-4 py-2 rounded-full text-sm font-medium"
               style={{
                 background: filter === cat ? '#C9A84C' : 'rgba(201,168,76,0.08)',
                 color: filter === cat ? '#0f0a04' : 'rgba(245,240,232,0.7)',
@@ -59,7 +59,7 @@ export default function TimelinePage() {
 
       {/* Timeline */}
       <div className="max-w-4xl mx-auto px-4 pb-24">
-        <div className="relative">
+        <div className="timeline-nebula relative">
           <div
             className="absolute left-8 top-0 bottom-0 w-px"
             style={{ background: 'linear-gradient(180deg, transparent, rgba(201,168,76,0.3) 10%, rgba(201,168,76,0.3) 90%, transparent)' }}
@@ -71,7 +71,7 @@ export default function TimelinePage() {
                 key={event.id}
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
+                viewport={{ once: false, amount: 0.18 }}
                 transition={{ duration: 0.6, delay: Math.min(i * 0.05, 0.5) }}
                 className="flex gap-6 pl-4"
               >
@@ -85,8 +85,7 @@ export default function TimelinePage() {
                 </div>
 
                 <div
-                  className="flex-1 p-5 rounded-xl"
-                  style={{ backgroundColor: '#0d0906', border: '1px solid rgba(201,168,76,0.1)' }}
+                  className="glass-card interactive-card flex-1 p-5 rounded-xl"
                 >
                   <div className="flex items-center gap-3 mb-2 flex-wrap">
                     <span className="text-xl font-bold" style={{ color: '#C9A84C', fontFamily: 'Playfair Display, serif' }}>

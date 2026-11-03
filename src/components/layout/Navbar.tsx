@@ -105,7 +105,7 @@ export default function Navbar() {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item)}
-                  className="px-3 py-2 text-sm rounded-md transition-all duration-200 cursor-pointer"
+                  className="interactive-control px-3 py-2 text-sm rounded-md cursor-pointer"
                   style={{
                     color: isActive ? '#C9A84C' : 'rgba(245,240,232,0.7)',
                     backgroundColor: isActive ? 'rgba(201,168,76,0.12)' : 'transparent',
@@ -123,7 +123,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="lg:hidden p-2 rounded-md"
+            className="interactive-control lg:hidden p-2 rounded-md"
             style={{ color: '#C9A84C' }}
             aria-label="Мәзір"
           >
@@ -145,7 +145,7 @@ export default function Navbar() {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item)}
-                  className="w-full text-left px-4 py-3 rounded-md text-sm transition-all"
+                  className="interactive-control w-full text-left px-4 py-3 rounded-md text-sm"
                   style={{
                     color: isActive ? '#C9A84C' : 'rgba(245,240,232,0.8)',
                     backgroundColor: isActive ? 'rgba(201,168,76,0.1)' : 'transparent',

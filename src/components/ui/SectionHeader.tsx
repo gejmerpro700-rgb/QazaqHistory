@@ -14,7 +14,7 @@ export default function SectionHeader({ kicker, title, subtitle, centered = true
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.18 }}
           transition={{ duration: 0.5 }}
           className="text-sm font-semibold tracking-[0.25em] uppercase mb-3"
           style={{ color: '#C9A84C' }}
@@ -25,7 +25,7 @@ export default function SectionHeader({ kicker, title, subtitle, centered = true
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: false, amount: 0.18 }}
         transition={{ duration: 0.6, delay: 0.1 }}
         className="text-4xl md:text-5xl font-bold mb-4"
         style={{ fontFamily: 'Playfair Display, serif', color: '#f5f0e8' }}
@@ -36,7 +36,7 @@ export default function SectionHeader({ kicker, title, subtitle, centered = true
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.18 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg max-w-2xl mx-auto"
           style={{ color: 'rgba(245,240,232,0.7)' }}

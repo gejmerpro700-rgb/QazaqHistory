@@ -10,10 +10,10 @@ interface SectionRevealProps {
 export default function SectionReveal({ children, className = '', delay = 0 }: SectionRevealProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
+      viewport={{ once: false, amount: 0.18 }}
+      transition={{ duration: 0.75, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
     >
       {children}

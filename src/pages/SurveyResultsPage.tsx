@@ -4,7 +4,7 @@ import SurveyResultsSection from '../components/sections/SurveyResultsSection';
 
 export default function SurveyResultsPage() {
   return (
-    <div style={{ backgroundColor: '#0f0a04', minHeight: '100vh', paddingTop: '4rem' }}>
+    <div className="page-surface pt-16">
       <div className="max-w-5xl mx-auto px-4 pt-8 pb-4">
         <Link
           to="/survey"

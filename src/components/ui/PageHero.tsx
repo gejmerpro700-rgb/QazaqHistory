@@ -12,7 +12,7 @@ interface PageHeroProps {
 
 export default function PageHero({ kicker, title, subtitle, backTo = '/', backLabel = 'Басты бетке оралу' }: PageHeroProps) {
   return (
-    <div className="pt-24 pb-16 px-4 text-center" style={{ backgroundColor: '#0f0a04' }}>
+    <div className="page-hero pt-24 pb-16 px-4 text-center">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -20 }}

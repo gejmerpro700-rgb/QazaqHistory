@@ -7,8 +7,7 @@ export default function LessonSection() {
   return (
     <section
       id="lesson"
-      className="py-24 px-4 scroll-mt-24"
-      style={{ backgroundColor: '#0a0602' }}
+      className="home-section section-lesson py-24 px-4 scroll-mt-24"
     >
       <div className="max-w-6xl mx-auto">
         <SectionHeader
@@ -22,9 +21,9 @@ export default function LessonSection() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.18 }}
             transition={{ duration: 0.7 }}
-            className="relative rounded-2xl overflow-hidden aspect-video group cursor-pointer"
+            className="video-frame relative rounded-2xl overflow-hidden aspect-video group cursor-pointer"
             style={{ backgroundColor: '#0a0602', border: '1px solid rgba(201,168,76,0.2)' }}
           >
             <Link to="/lesson" className="block w-full h-full">
@@ -53,7 +52,7 @@ export default function LessonSection() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.18 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <div className="flex items-center gap-3 mb-6">
@@ -87,7 +86,7 @@ export default function LessonSection() {
 
             <Link
               to="/lesson"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105"
+              className="interactive-control inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold"
               style={{ background: '#C9A84C', color: '#0f0a04' }}
             >
               Сұхбатқа өту

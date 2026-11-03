@@ -33,7 +33,7 @@ function LoadingFallback() {
 export default function App() {
   return (
     <HashRouter>
-      <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#0f0a04' }}>
+      <div className="app-shell min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">
           <Suspense fallback={<LoadingFallback />}>

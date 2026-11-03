@@ -26,8 +26,7 @@ export default function TimelineSection() {
   return (
     <section
       id="timeline"
-      className="py-24 px-4 scroll-mt-24"
-      style={{ backgroundColor: '#0f0a04' }}
+      className="home-section section-timeline py-24 px-4 scroll-mt-24"
     >
       <div className="max-w-4xl mx-auto">
         <SectionHeader
@@ -36,7 +35,7 @@ export default function TimelineSection() {
           subtitle="XX ғасыр басындағы Қазақстандағы негізгі тарихи оқиғалар"
         />
 
-        <div className="relative">
+        <div className="timeline-nebula relative">
           {/* Vertical line */}
           <div
             className="absolute left-8 top-0 bottom-0 w-px"
@@ -49,7 +48,7 @@ export default function TimelineSection() {
                 key={event.id}
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
+                viewport={{ once: false, amount: 0.18 }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="flex gap-6 pl-4"
               >
@@ -65,8 +64,7 @@ export default function TimelineSection() {
 
                 {/* Content */}
                 <div
-                  className="flex-1 p-5 rounded-xl"
-                  style={{ backgroundColor: '#0d0906', border: '1px solid rgba(201,168,76,0.1)' }}
+                  className="glass-card interactive-card flex-1 p-5 rounded-xl"
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-xl font-bold" style={{ color: '#C9A84C', fontFamily: 'Playfair Display, serif' }}>
@@ -98,13 +96,13 @@ export default function TimelineSection() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.18 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-12"
         >
           <Link
             to="/timeline"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105 border"
+            className="interactive-control inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold border"
             style={{ borderColor: 'rgba(201,168,76,0.4)', color: '#C9A84C' }}
           >
             Толық хронология ({timelineEvents.length} оқиға)

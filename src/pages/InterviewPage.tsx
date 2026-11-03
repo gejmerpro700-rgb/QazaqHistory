@@ -4,7 +4,7 @@ import VideoPlayer from '../components/ui/VideoPlayer';
 
 export default function InterviewPage() {
   return (
-    <div style={{ backgroundColor: '#0f0a04', minHeight: '100vh' }}>
+    <div className="page-surface interview-page">
       <PageHero
         kicker="ТІРІ КУӘЛАР"
         title="Бейне-сұхбат"
@@ -18,7 +18,7 @@ export default function InterviewPage() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: false, amount: 0.18 }}
               transition={{ duration: 0.6 }}
             >
               <VideoPlayer src={`${import.meta.env.BASE_URL}Survey.mp4`} />
@@ -29,11 +29,11 @@ export default function InterviewPage() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.18 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-4"
           >
-            <div className="p-5 rounded-xl" style={{ backgroundColor: '#0d0906', border: '1px solid rgba(201,168,76,0.15)' }}>
+            <div className="glass-card p-5 rounded-xl">
               <p className="text-xs font-semibold mb-2" style={{ color: '#C9A84C' }}>Сұхбат туралы</p>
               <h3 className="font-bold text-sm mb-2" style={{ color: '#f5f0e8' }}>Тарихи сауалнама сұхбаты</h3>
               <p className="text-xs leading-relaxed" style={{ color: 'rgba(245,240,232,0.6)' }}>
@@ -41,7 +41,7 @@ export default function InterviewPage() {
               </p>
             </div>
 
-            <div className="p-5 rounded-xl" style={{ backgroundColor: '#0d0906', border: '1px solid rgba(201,168,76,0.15)' }}>
+            <div className="glass-card p-5 rounded-xl">
               <p className="text-xs font-semibold mb-3" style={{ color: '#C9A84C' }}>Тарихи контекст</p>
               <div className="space-y-2 text-xs" style={{ color: 'rgba(245,240,232,0.6)' }}>
                 <div><span style={{ color: '#C9A84C' }}>Кезең:</span> XX ғасырдың басы (1900–1920)</div>

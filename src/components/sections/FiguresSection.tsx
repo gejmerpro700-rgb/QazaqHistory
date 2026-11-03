@@ -10,8 +10,7 @@ export default function FiguresSection() {
   return (
     <section
       id="figures"
-      className="py-24 px-4 scroll-mt-24"
-      style={{ backgroundColor: '#0a0602' }}
+      className="home-section section-figures py-24 px-4 scroll-mt-24"
     >
       <div className="max-w-7xl mx-auto">
         <SectionHeader
@@ -26,12 +25,12 @@ export default function FiguresSection() {
               key={figure.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: false, amount: 0.18 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
             >
               <Link
                 to={`/figures/${figure.id}`}
-                className="group block rounded-2xl p-6 h-full transition-all duration-300 hover:-translate-y-1"
+                className="interactive-card glass-card group block rounded-2xl p-6 h-full"
                 style={{
                   backgroundColor: '#0f0a04',
                   border: '1px solid rgba(201,168,76,0.15)',
@@ -71,7 +70,7 @@ export default function FiguresSection() {
         <div className="text-center">
           <Link
             to="/figures"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105 border"
+            className="interactive-control inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold border"
             style={{ borderColor: 'rgba(201,168,76,0.4)', color: '#C9A84C' }}
           >
             Барлық тарихи тұлғалар ({historicalFigures.length})

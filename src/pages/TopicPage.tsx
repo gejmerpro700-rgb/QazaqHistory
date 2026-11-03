@@ -13,9 +13,9 @@ export default function TopicPage() {
   const relatedFigures = historicalFigures.filter((f) => topic.figures.includes(f.id));
 
   return (
-    <div style={{ backgroundColor: '#0f0a04', minHeight: '100vh' }}>
+    <div className="page-surface section-topics">
       {/* Hero */}
-      <div className="pt-24 pb-16 px-4" style={{ backgroundColor: '#0a0602' }}>
+      <div className="page-hero pt-24 pb-16 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }} className="mb-8">
             <Link to="/topics" className="inline-flex items-center gap-2 text-sm" style={{ color: '#C9A84C' }}>
@@ -47,10 +47,9 @@ export default function TopicPage() {
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: false, amount: 0.18 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="p-8 rounded-2xl"
-              style={{ backgroundColor: '#0d0906', border: '1px solid rgba(201,168,76,0.1)' }}
+              className="glass-card p-8 rounded-2xl"
             >
               <h2 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif', color: '#f5f0e8' }}>
                 {section.title}
@@ -76,7 +75,7 @@ export default function TopicPage() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.18 }}
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
@@ -90,8 +89,7 @@ export default function TopicPage() {
             {topic.keyDates.map((kd, i) => (
               <div
                 key={i}
-                className="flex gap-4 p-4 rounded-xl"
-                style={{ backgroundColor: '#0d0906', border: '1px solid rgba(201,168,76,0.1)' }}
+                className="glass-card interactive-card flex gap-4 p-4 rounded-xl"
               >
                 <div className="font-bold text-sm flex-shrink-0 pt-0.5" style={{ color: '#C9A84C', minWidth: '140px' }}>
                   {kd.date}
@@ -109,7 +107,7 @@ export default function TopicPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.18 }}
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-3 mb-6">
@@ -123,7 +121,7 @@ export default function TopicPage() {
                 <Link
                   key={figure.id}
                   to={`/figures/${figure.id}`}
-                  className="flex items-center gap-4 p-4 rounded-xl transition-all hover:-translate-y-0.5"
+                  className="glass-card interactive-card flex items-center gap-4 p-4 rounded-xl"
                   style={{
                     backgroundColor: '#0d0906',
                     border: '1px solid rgba(201,168,76,0.1)',
